@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitZone Gym Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- header part -->
+  <header>
+    <div class="logo-box">FZ</div>
+    <h1>FITZONE GYM</h1>
+    <nav>
+      <button onclick="goToPrograms()">Programs</button>
+      <button onclick="goToTrainers()">Trainers</button>
+      <button onclick="goToReviews()">Reviews</button>
+      <button onclick="openContactPopup()">Contact</button>
+    </nav>
+  </header>
+
+  <!-- main banner -->
+  <div class="banner">
+    <h2>Transform Your Body & Mind</h2>
+    <p>Join the best fitness experience with expert trainers and proven results</p>
+    <div class="banner-buttons">
+      <button class="button btn-primary" onclick="openTrialPopup()">Start Free Trial</button>
+      <button class="button btn-secondary" onclick="openSchedulePopup()">View Schedule</button>
+    </div>
+  </div>
+
+  <!-- stats numbers -->
+  <div class="statistics">
+    <div class="stat-box">
+      <div class="big-number">2500+</div>
+      <div class="stat-label">Active Members</div>
+    </div>
+    <div class="stat-box">
+      <div class="big-number">50+</div>
+      <div class="stat-label">Expert Trainers</div>
+    </div>
+    <div class="stat-box">
+      <div class="big-number">100+</div>
+      <div class="stat-label">Weekly Classes</div>
+    </div>
+    <div class="stat-box">
+      <div class="big-number">10</div>
+      <div class="stat-label">Years Running</div>
+    </div>
+  </div>
+
+  <!-- programs section -->
+  <div class="content-section" id="programsSection">
+    <h2 class="section-heading">Our Programs</h2>
+    <p class="section-desc">Choose the perfect fitness plan for your goals</p>
+    
+    <div class="program-cards">
+      <div class="program-card">
+        <div class="card-image">💪</div>
+        <div class="card-content">
+          <h3>Strength Training</h3>
+          <p>Build muscle mass and increase your overall strength with our proven training programs</p>
+          <div class="pricing">$49/month</div>
+          <ul class="feature-list">
+            <li>4 training sessions per week</li>
+            <li>Personalized workout plans</li>
+            <li>Progress tracking system</li>
+            <li>Nutrition guidance included</li>
+          </ul>
+          <button class="enroll-button" onclick="openEnrollPopup('Strength Training')">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <div class="card-image">🏃</div>
+        <div class="card-content">
+          <h3>Cardio Blast</h3>
+          <p>High intensity cardio workouts designed to burn fat and boost your endurance levels</p>
+          <div class="pricing">$39/month</div>
+          <ul class="feature-list">
+            <li>Unlimited class access</li>
+            <li>HIIT training sessions</li>
+            <li>Calorie tracking tools</li>
+            <li>Group workout motivation</li>
+          </ul>
+          <button class="enroll-button" onclick="openEnrollPopup('Cardio Blast')">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <div class="card-image">🧘</div>
+        <div class="card-content">
+          <h3>Yoga & Flexibility</h3>
+          <p>Improve your flexibility balance and mental clarity through guided yoga practice</p>
+          <div class="pricing">$35/month</div>
+          <ul class="feature-list">
+            <li>Daily yoga class options</li>
+            <li>Meditation sessions included</li>
+            <li>Flexibility improvement plan</li>
+            <li>Stress relief techniques</li>
+          </ul>
+          <button class="enroll-button" onclick="openEnrollPopup('Yoga & Flexibility')">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <div class="card-image">⭐</div>
+        <div class="card-content">
+          <h3>Premium All-Access</h3>
+          <p>Get complete access to all our programs facilities and exclusive member benefits</p>
+          <div class="pricing">$89/month</div>
+          <ul class="feature-list">
+            <li>Access to all programs</li>
+            <li>One-on-one personal training</li>
+            <li>Custom meal planning service</li>
+            <li>Priority class booking</li>
+          </ul>
+          <button class="enroll-button" onclick="openEnrollPopup('Premium All-Access')">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- trainers -->
+  <div class="content-section white-bg" id="trainersSection">
+    <h2 class="section-heading">Meet Our Trainers</h2>
+    <p class="section-desc">Certified professionals dedicated to helping you succeed</p>
+    
+    <div class="trainer-cards">
+      <div class="trainer-box">
+        <div class="trainer-photo">👨</div>
+        <h3 class="trainer-name">Mike Johnson</h3>
+        <div class="trainer-title">Strength & Conditioning Expert</div>
+        <p class="trainer-desc">Over 10 years of experience in athletic performance and strength training programs</p>
+      </div>
+
+      <div class="trainer-box">
+        <div class="trainer-photo">👩</div>
+        <h3 class="trainer-name">Sarah Williams</h3>
+        <div class="trainer-title">Yoga & Wellness Coach</div>
+        <p class="trainer-desc">Registered yoga instructor specializing in mindfulness and holistic health approaches</p>
+      </div>
+
+      <div class="trainer-box">
+        <div class="trainer-photo">👨</div>
+        <h3 class="trainer-name">David Chen</h3>
+        <div class="trainer-title">HIIT & Cardio Specialist</div>
+        <p class="trainer-desc">Former professional athlete with expertise in high intensity interval training methods</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- reviews -->
+  <div class="content-section dark-section" id="reviewsSection">
+    <h2 class="section-heading">What Our Members Say</h2>
+    <p class="section-desc">Real transformations from real people</p>
+    
+    <div class="review-cards">
+      <div class="review-box">
+        <p class="review-text">"FitZone completely changed my life! I managed to lose 30 pounds in just 4 months and I feel so much more confident now."</p>
+        <p class="reviewer-name">— Jessica Martinez</p>
+      </div>
+
+      <div class="review-box">
+        <p class="review-text">"This is hands down the best gym I have ever been a member of."</p>
+        <p class="reviewer-name">— Robert Thompson</p>
+      </div>
+
+      <div class="review-box">
+        <p class="review-text">"The yoga classes at FitZone have been life changing for me."</p>
+        <p class="reviewer-name">— Emily Watson</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup -->
+  <div class="popup" id="popupModal">
+    <div class="popup-container">
+      <button class="close-btn" onclick="closePopup()">&times;</button>
+      <div id="popupContent"></div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-menu">
+      <button>About Us</button>
+      <button>Our Locations</button>
+      <button>Career Opportunities</button>
+      <button>Privacy Policy</button>
+      <button>Terms of Service</button>
+    </div>
+    <p>&copy; 2024 FitZone Fitness Gym. All rights reserved.</p>
+    <p style="margin-top:12px; opacity:0.7; font-size:14px;">Transform your body and transform your life</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
